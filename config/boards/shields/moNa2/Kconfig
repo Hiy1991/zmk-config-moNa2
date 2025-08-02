@@ -30,6 +30,9 @@ config LAYOUT_SHIFT_TARGET_SWAP_CTRL_CMD
     help
       Swap Ctrl / Cmd for Windows / Mac.
 
+config LAYOUT_SHIFT_TARGET_COLEMAK    # Added this line
+    bool "Colemak"                    # Added this line
+
 endchoice
 
 config LAYOUT_SHIFT_PERSISTENT_STATE
