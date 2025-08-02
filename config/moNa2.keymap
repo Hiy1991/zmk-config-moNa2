@@ -65,6 +65,7 @@
 &kp A      &kp S           &kp D         &kp F    &kp G               &trans         &kp MINUS           &kp H          &kp J  &kp K     &kp L     &kp ENTER
 &kp Z      &kp X           &kp C         &kp V    &kp B               &kp LSHIFT     &kp RIGHT_SHIFT     &kp N          &kp M  &mkp MB1  &mkp MB3  &mkp MB2
 &kp LCTRL  &lt 4 LEFT_WIN  &kp LEFT_ALT  &kp TAB  &lt 1 INT_MUHENKAN  &lt 2 SPACE    &lt 1 LANG_HANGEUL  &kp BACKSPACE                             &lt 4 DELETE
+&kp EQUAL  &tog_ls        &tog_ls_on     &tog_ls_off
             >;
 
             sensor-bindings =
