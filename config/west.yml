@@ -5,7 +5,9 @@ manifest:
     - name: sayu-hub
       url-base: https://github.com/sayu-hub
     - name: caksoylar  # <-- new entry
-      url-base: https://github.com/caksoylar  
+      url-base: https://github.com/caksoylar
+    - name: kot149
+      url-base: https://github.com/kot149
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -17,20 +19,6 @@ manifest:
     - name: zmk-rgbled-widget  # <-- new entry
       remote: caksoylar
       revision: main
-  self:
-    path: config
-    
-manifest:
-  remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
-    - name: kot149
-      url-base: https://github.com/kot149
-  projects:
-    - name: zmk
-      remote: zmkfirmware
-      revision: main
-      import: app/west.yml
     - name: zmk-layout-shift
       remote: kot149
       revision: v1
