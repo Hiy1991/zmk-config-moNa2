@@ -16,7 +16,6 @@ jobs:
       - name: Install west and dependencies
         run: |
           pip install west
-          west init -l zmk
           west update
           west zephyr-export
 
