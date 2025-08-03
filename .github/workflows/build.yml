@@ -3,3 +3,7 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    with:
+      config-path: config
+    env:
+      SHIELD: moNa2_R,rgbled_adapte
