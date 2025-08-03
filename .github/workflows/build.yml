@@ -13,6 +13,10 @@ jobs:
         with:
           python-version: '3.10'
 
+      - name: Clean existing modules
+        run: |
+          rm -rf zmk zephyr modules
+
       - name: Install west and dependencies
         run: |
           pip install west
