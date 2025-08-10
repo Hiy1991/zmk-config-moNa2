@@ -34,6 +34,13 @@
             tapping-term-ms = <200>;
         };
 
+        mouse_scroll: mouse_wheel_scrl{
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
+            bindings = <&msc>, <&msc>;
+         // 追加: スクロールのタップ時間を設定 (20ms)
+            tap-ms = <20>;
+        };
         scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
