@@ -80,7 +80,7 @@
             >;
 
             sensor-bindings =
-                <&mouse_scroll SCRL_LEFT SCRL_RIGHT>;,
+                <&mouse_scroll SCRL_LEFT SCRL_RIGHT>,
                 <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
