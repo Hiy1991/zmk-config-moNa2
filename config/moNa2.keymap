@@ -52,13 +52,20 @@
             tapping-term-ms = <200>;
         };
 
-        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-
-            tap-ms = <20>;
+        mouse_scroll: mouse_wheel_scrl{
+         compatible = "zmk,behavior-sensor-rotate-var";
+         #sensor-binding-cells = <2>;
+         bindings = <&msc>, <&msc>;
+         // 追加: スクロールのタップ時間を設定 (20ms)
+         tap-ms = <20>;
         };
+        //scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+        //    compatible = "zmk,behavior-sensor-rotate";
+        //    #sensor-binding-cells = <0>;
+        //    bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+
+        //    tap-ms = <20>;
+        //};
     };
 
     keymap {
@@ -73,7 +80,7 @@
             >;
 
             sensor-bindings =
-                <&scroll_up_down>,
+                <&mouse_scroll SCRL_LEFT SCRL_RIGHT>;,
                 <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
@@ -85,7 +92,7 @@
 &trans            &kp N0  &kp DOT  &trans  &trans    &trans    &trans  &trans                                                                              &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&mouse_scroll SCRL_LEFT SCRL_RIGHT>;
         };
 
         layer_2 {
@@ -96,7 +103,7 @@
 &trans  &kp NUMBER_0     &trans           &trans           &trans        &trans                     &trans          &kp NUMBER_0                                            &kp PIPE
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&mouse_scroll SCRL_LEFT SCRL_RIGHT>;
         };
 
         layer_3 {
@@ -107,7 +114,7 @@
 &none   &none                   &none           &none                    &none  &none    &none  &none                                     &none
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&mouse_scroll SCRL_LEFT SCRL_RIGHT>;
         };
 
         layer_4 {
@@ -118,7 +125,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans   &trans                                                  &bt BT_CLR_ALL
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&mouse_scroll SCRL_LEFT SCRL_RIGHT>;
         };
 
         layer_5 {
@@ -129,7 +136,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&mouse_scroll SCRL_LEFT SCRL_RIGHT>;
         };
 
         MOUSE {
@@ -140,7 +147,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&mouse_scroll SCRL_UP SCRL_DOWN>;
         };
 
         layer_7 {
