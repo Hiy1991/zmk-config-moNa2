@@ -37,13 +37,13 @@
             key-positions = <34 35 36>;
         };
 
-        pageup {
-            bindings = <&kp PAGE_UP>;
+        pagedown {
+            bindings = <&kp PAGE_DOWN>;
             key-positions = <32 31>;
         };
 
-        pagedown {
-            bindings = <&kp PAGE_DOWN>;
+        pageup {
+            bindings = <&kp PAGE_UP>;
             key-positions = <31 30>;
         };
     };
@@ -97,7 +97,7 @@
             >;
 
             sensor-bindings =
-                <&mouse_scroll SCRL_DOWN SCRL_UP>,
+                <&mouse_scroll SCRL_UP SCRL_DOWN>,
                 <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
