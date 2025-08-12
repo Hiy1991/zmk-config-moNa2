@@ -46,6 +46,11 @@
             bindings = <&kp PAGE_UP>;
             key-positions = <31 30>;
         };
+
+        new_explorer {
+            bindings = <&kp LG(E)>;
+            key-positions = <11 12 13>;
+        };
     };
 
     macros {
@@ -91,7 +96,7 @@
         default_layer {
             bindings = <
 &kp ESC    &kp W           &kp E         &kp R      &kp T                                       &kp Y                       &kp U  &kp I      &kp O    &kp P
-&kp A      &kp S           &kp D         &kp F      &kp G       &trans         &mkp MB1         &kp H                       &kp J  &kp K      &kp L    &lt 6 ENTER
+&kp A      &kp S           &kp D         &kp F      &kp G       &trans         &kt RIGHT_SHIFT  &kp H                       &kp J  &kp K      &kp L    &lt 6 ENTER
 &kp Z      &kp X           &kp C         &kp V      &kp B       &mkp MB1       &kp RIGHT_SHIFT  &kp N                       &kp M  &kp COMMA  &kp DOT  &lt 5 SLASH
 &kp LCTRL  &lt 4 LEFT_WIN  &kp LEFT_ALT  &lt 6 TAB  &lt 2 INT5  &lt 3 SPACE    &lt 1 KP_ENTER   &lt 2 INT_KATAKANAHIRAGANA                             &lt 4 DEL
             >;
@@ -114,10 +119,10 @@
 
         layer_2 {
             bindings = <
-&trans  &kp F2           &kp F4           &kp F5           &kp F10                                                  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTERISK  &kp BACKSPACE
-&trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))    &kp UNDERSCORE  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS      &trans
-&trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                  &trans          &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH     &trans
-&trans  &kp NUMBER_0     &trans           &trans           &trans        &trans                     &trans          &kp NUMBER_0                                            &kp PIPE
+&trans  &kp F2  &kp F4  &kp F5  &kp F10                            &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTERISK  &kp BACKSPACE
+&trans  &none   &none   &none   &none    &none     &kp UNDERSCORE  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS      &trans
+&trans  &none   &none   &none   &none    &trans    &trans          &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH     &trans
+&trans  &none   &trans  &trans  &trans   &trans    &trans          &kp NUMBER_0                                            &kp PIPE
             >;
 
             sensor-bindings = <&mouse_scroll SCRL_DOWN SCRL_UP>;
